@@ -35,4 +35,3 @@ def enrich_tokens():
                 "near_ath": False
             }
     return enriched_tokens
-
