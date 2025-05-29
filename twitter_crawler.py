@@ -16,7 +16,7 @@ def get_twitter_counts():
 
     for kw in KEYWORDS:
         query = f"{kw} lang:en"
-        url = f"https://api.twitter.com/2/tweets/search/recent?query={query}&max_results=100"  
+        url = f"https://api.twitter.com/2/tweets/search/recent?query={query}&max_results=100"  # 确保没有无效字符
         try:
             res = requests.get(url, headers=headers)
             data = res.json()
