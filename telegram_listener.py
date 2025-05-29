@@ -1,8 +1,13 @@
-from telethon.sync import TelegramClient, events
+import os
 import json
-from config import config
-from keywords import KEYWORDS
 from collections import defaultdict
+from telethon.sync import TelegramClient, events
+from keywords import KEYWORDS
+
+# 读取 config_data.json 配置文件
+config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config_data.json')
+with open(config_path, 'r') as f:
+    config = json.load(f)
 
 # 用你上传的 .session 文件
 client = TelegramClient('meme', config["api_id"], config["api_hash"])
