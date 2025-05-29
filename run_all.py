@@ -1,7 +1,11 @@
 import asyncio
-from config import config
+import json
 from telethon.sync import TelegramClient
 from emotion_merger import merge_and_write
+
+# 读取配置文件
+with open('config.json') as f:
+    config = json.load(f)
 
 client = TelegramClient('meme', config["api_id"], config["api_hash"])
 
