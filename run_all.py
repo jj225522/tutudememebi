@@ -3,8 +3,8 @@ import json
 from telethon.sync import TelegramClient
 from emotion_merger import merge_and_write
 
-# 读取配置文件
-with open('config.json') as f:
+# 读取 config.json 配置文件
+with open('config.json', 'r') as f:
     config = json.load(f)
 
 client = TelegramClient('meme', config["api_id"], config["api_hash"])
