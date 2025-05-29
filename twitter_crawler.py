@@ -4,7 +4,7 @@ import os
 from keywords import KEYWORDS
 
 # 读取 config_data.json 配置文件
-config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config_data.json')  
+config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config_data.json')
 with open(config_path, 'r') as f:
     config = json.load(f)
 
